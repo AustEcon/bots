@@ -1628,13 +1628,10 @@ class xmlrpc(_comsession):
     '''
 
     def connect(self):
-        try:
-            import xmlrpc.client
-        except ImportError:
-            import xmlrpc.client as xmlrpclib
+        import xmlrpc.client as xmlrpclib
         uri = 'http://%(username)s%(secret)s@%(host)s:%(port)s' % self.channeldict
         self.filename = 'http://%(username)s@%(host)s:%(port)s' % self.channeldict  # used as 'filename' in reports etc
-        session = xmlrpc.client.ServerProxy(uri)
+        session = xmlrpclib.ServerProxy(uri)
         self.xmlrpc_call = getattr(session, self.channeldict['path'])  # self.xmlrpc_call is called in communication
 
     @botslib.log_session
