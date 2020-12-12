@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
@@ -75,13 +75,13 @@ def test_ccode_with_unicode():
     domein = 'test'
     tests = [(u'key1', u'leftcode'),
              (u'key2', u'~!@#$%^&*()_+}{:";][=-/.,<>?`'),
-             (u'key3', u'?érýúíó?ás??lzcn?'),
-             (u'key4', u'?ë?ÿüïöä´¨???è?ùì'),
-             (u'key5', u'òà???UIÕÃ?Ñ`~'),
+             (u'key3', u'?ï¿½rï¿½ï¿½ï¿½ï¿½?ï¿½s??lzcn?'),
+             (u'key4', u'?ï¿½?ï¿½ï¿½ï¿½ï¿½ä´¨???ï¿½?ï¿½ï¿½'),
+             (u'key5', u'ï¿½ï¿½???UIï¿½ï¿½?ï¿½`~'),
              (u'key6', u"a\xac\u1234\u20ac\U00008000"),
              (u'key7', u"abc_\u03a0\u03a3\u03a9.txt"),
-             (u'key8', u"?ÉRÝÚÍÓ?ÁS??LZCN??"),
-             (u'key9', u"Ë?¨YÜ¨IÏÏÖÄ???È?ÙÌÒ`À`Z?"),
+             (u'key8', u"?ï¿½Rï¿½ï¿½ï¿½ï¿½?ï¿½S??LZCN??"),
+             (u'key9', u"ï¿½?ï¿½YÜ¨Iï¿½ï¿½ï¿½ï¿½???ï¿½?ï¿½ï¿½ï¿½`ï¿½`Z?"),
              ]
     try:  # clean before test
         botslib.changeq(u'''DELETE FROM ccode ''')
